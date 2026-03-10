@@ -1,0 +1,64 @@
+### Read all users
+GET http://localhost:3000/user-api/users
+
+### Read a user by id
+GET http://localhost:3000/user-api/users/12
+
+
+### create new user
+POST http://localhost:3000/user-api/users
+Content-Type: application/json
+
+{
+    "id":1,
+    "name":"Hari",
+    "age":20
+}
+
+
+### Update a user
+PUT http://localhost:3000/user-api/users
+Content-Type: application/json
+
+{
+    "id":1,
+    "name":"Naveen",
+    "age":19
+}
+
+### Delete a user by id
+DELETE http://localhost:3000/user-api/users/12
+
+
+
+
+### create a new product
+POST http://localhost:3000/product-api/product
+Content-Type: application/json
+
+{
+    "id":1,
+    "name":"pen",
+    "brand":"Agni",
+    "price":5
+}
+
+### read all products
+GET http://localhost:3000/product-api/product
+
+### read all products by brand
+GET http://localhost:3000/product-api/product/Safari
+
+### update a product 
+PUT http://localhost:3000/product-api/product
+Content-Type: application/json
+
+{
+    "id":1,
+    "name":"Bag",
+    "brand":"Safari",
+    "price":500
+}
+
+### Delete a product by id
+DELETE http://localhost:3000/product-api/product/1
