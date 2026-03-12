@@ -1,0 +1,85 @@
+### Read all users (req to protected route)
+GET http://localhost:4000/user-api/users
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkhhcmlzaEBnbWFpbC5jb20iLCJpYXQiOjE3NzMwNjgyNzksImV4cCI6MTc3MzA3MTg3OX0.e4tPduBhG_h8wi737t69tu8wCN0V-0hxbQfoA5A6Ny4; Path=/; HttpOnly; SameSite=Lax
+### Read a user by id
+GET http://localhost:4000/user-api/user
+
+### create new user
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "username":"Harish",
+    "password":"Harish",
+    "email":"Harish@gmail.com",
+    "age":19
+}
+
+### user login
+POST http://localhost:4000/user-api/auth
+Content-Type: application/json
+
+{
+    "email":"Harish@gmail.com",
+    "password":"Harish"
+}
+
+### Update a user
+PUT http://localhost:4000/user-api/users/69aa98336ad966bfbc13b0fc
+Content-Type: application/json
+
+{
+    "username":"Harish",
+    "password":"Harish@159",
+    "email":"harish08@gmail.com",
+    "age":19
+}
+
+### Delete a user by id
+DELETE http://localhost:4000/user-api/users/69aa98336ad966bfbc13b0fc
+
+
+### add product to user
+PUT http://localhost:4000/user-api/cart/product-id/69abb4dcee541300ad9e5f5b
+
+
+
+### create a new product
+POST http://localhost:4000/product-api/product
+Content-Type: application/json
+
+{
+    "productID":"24eg06",
+    "productName":"Mobile",
+    "price":20000,
+    "brand":"Vivo"
+}
+
+### product login
+POST http://localhost:4000/product-api/auth
+Content-Type: application/json
+
+{
+    "productID":"24eg14"
+}
+
+### read all products
+GET http://localhost:4000/product-api/product
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm9kdWN0SUQiOiIyNGVnMTQiLCJpYXQiOjE3NzMyNDM0MzQsImV4cCI6MTc3MzI0MzQ0OX0.TcJcaWl0JgpUeSNmio_M7-cjx3m29yjxaxz5cIWUWmQ; Path=/; HttpOnly; SameSite=Lax
+
+### read all products by brand
+GET http://localhost:4000/product-api/product/24eg14
+
+### update a product 
+PUT http://localhost:4000/product-api/product/24eg06
+Content-Type: application/json
+
+{
+    "productID":"24eg04",
+    "productName":"mobile",
+    "price":30000,
+    "brand":"Vivo"
+}
+
+### Delete a product by id
+DELETE http://localhost:4000/product-api/product/TV
