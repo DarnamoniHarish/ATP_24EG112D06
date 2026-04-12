@@ -1,0 +1,15 @@
+### admin login
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "email":"admin@gmail.com",
+    "password":"admin"
+}
+
+### read all USERS & AUTHOR  (email)
+
+###Block or Activate User or Author
+
+###read articles
+GET http://localhost:5000/auth/users
