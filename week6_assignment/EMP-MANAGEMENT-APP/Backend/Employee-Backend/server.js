@@ -8,10 +8,16 @@ const app=exp()
 
 //add cors middleware
 app.use(
-    cors({
-        origin:["http://localhost:5173"],
-    }),
+  cors({
+    origin: [
+      "http://localhost:5173",              // local dev
+      "https://week6-sepia.vercel.app"      // deployed frontend
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+  })
 );
+
 
 //body parser middleware
 app.use(exp.json());
