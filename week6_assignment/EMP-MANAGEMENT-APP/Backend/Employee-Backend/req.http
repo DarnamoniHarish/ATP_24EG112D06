@@ -1,5 +1,5 @@
 ###Create employee
-POST http://localhost:5000/employee-api/employee
+POST https://employee-backend-xxcu.onrender.com/employee-api/employee
 Content-Type: application/json
 
 {
@@ -11,10 +11,10 @@ Content-Type: application/json
 }
 
 ###Read all employees
-GET http://localhost:5000/employee-api/employee
+GET https://employee-backend-xxcu.onrender.com/employee-api/employee
 
 ###edit employee
-PUT http://localhost:5000/employee-api/employee/69caa833c313c15eadc49d51
+PUT https://employee-backend-xxcu.onrender.com/employee-api/employee/69caa833c313c15eadc49d51
 Content-Type: application/json
 
 {
@@ -26,4 +26,4 @@ Content-Type: application/json
 }
 
 ###delete employee
-DELETE http://localhost:5000/employee-api/employee/69caa833c313c15eadc49d51
+DELETE https://employee-backend-xxcu.onrender.com/employee-api/employee/69caa833c313c15eadc49d51

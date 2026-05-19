@@ -15,7 +15,7 @@ function CreateEmp() {
         try{
             setLoading(true);
             //make HTTP post req
-            let res=await fetch("http://localhost:5000/employee-api/employee",
+            let res=await fetch("https://employee-backend-xxcu.onrender.com/employee-api/employee",
                 {
                     method:"POST",
                     headers:{"Content-Type":"application/json"},
