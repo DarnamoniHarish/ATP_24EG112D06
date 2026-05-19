@@ -10,13 +10,14 @@ const app=exp()
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",              // local dev
-      "https://week6-sepia.vercel.app"      // deployed frontend
+      "http://localhost:5173", // local dev
+      "https://week6-git-main-darnamoniharishs-projects.vercel.app" // deployed frontend
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"]
   })
 );
+
 
 
 //body parser middleware
