@@ -2,7 +2,7 @@ import exp from 'express'
 import { UserModel } from '../models/UserModel.js'
 import {ArticleModel} from '../models/ArticleModel.js'
 import {verifyToken} from '../middlewares/VerifyToken.js'
-export const authorApp=exp()
+export const authorApp=exp.Router()
 
 //write article 
 authorApp.post("/article",verifyToken("AUTHOR"),async(req,res)=>{
