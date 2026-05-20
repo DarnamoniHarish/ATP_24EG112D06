@@ -16,7 +16,7 @@ function AdminUsers() {
     setLoading(true);
     setError(null);
     try {
-      const res = await axios.get("http://localhost:5000/admin-api/users", {
+      const res = await axios.get("https://atp-24eg112d06.onrender.com/admin-api/users", {
         withCredentials: true,
       });
       setUsers(res.data.payload);
@@ -34,7 +34,7 @@ function AdminUsers() {
 
     try {
       const res = await axios.patch(
-        `http://localhost:5000/admin-api/user/${user._id}`,
+        `https://atp-24eg112d06.onrender.com/admin-api/user/${user._id}`,
         { isUserActive: newStatus },
         { withCredentials: true }
       );

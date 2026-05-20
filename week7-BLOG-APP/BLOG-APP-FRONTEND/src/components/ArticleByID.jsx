@@ -52,7 +52,7 @@ function ArticleByID() {
       setLoading(true);
       try {
         const res = await axios.get(
-          `http://localhost:5000/auth/articles/${id}`
+          `https://atp-24eg112d06.onrender.com/auth/articles/${id}`
         );
         setArticle(res.data.payload);
       } catch (err) {
@@ -82,7 +82,7 @@ function ArticleByID() {
 
     try {
       const res = await axios.patch(
-        "http://localhost:5000/author-api/article",
+        "https://atp-24eg112d06.onrender.com/author-api/article",
         { articleId: article._id, isArticleActive: newStatus },
         { withCredentials: true }
       );
@@ -104,7 +104,7 @@ function ArticleByID() {
     commentObj.articleId = article._id;
     try {
       const res = await axios.put(
-        "http://localhost:5000/user-api/articles",
+        "https://atp-24eg112d06.onrender.com/user-api/articles",
         commentObj,
         { withCredentials: true }
       );

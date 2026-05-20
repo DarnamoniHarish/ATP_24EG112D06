@@ -24,7 +24,7 @@ function AdminArticles() {
       setLoading(true);
       setError(null);
       try {
-        const res = await axios.get("http://localhost:5000/admin-api/articles", {
+        const res = await axios.get("https://atp-24eg112d06.onrender.com/admin-api/articles", {
           withCredentials: true,
         });
         setArticles(res.data.payload);

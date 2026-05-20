@@ -49,7 +49,7 @@ function Register() {
       //start loading
         setLoading(true);
         //make HTTP POST req to create user in backend
-        let res =await axios.post("http://localhost:5000/auth/users",formData,{withCredentials:true});
+        let res =await axios.post("https://atp-24eg112d06.onrender.com/auth/users",formData,{withCredentials:true});
 
         if(res.status==201){
           //navigate to login

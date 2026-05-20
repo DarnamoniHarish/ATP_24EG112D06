@@ -1,5 +1,5 @@
 ### Register User
-POST http://localhost:5000/auth/users
+POST https://atp-24eg112d06.onrender.com/auth/users
 Content-Type: application/json
 
 {
@@ -12,7 +12,7 @@ Content-Type: application/json
 }
 
 ###make user authenticate
-POST http://localhost:5000/auth/login
+POST https://atp-24eg112d06.onrender.com/auth/login
 Content-Type: application/json
 
 {
@@ -21,13 +21,13 @@ Content-Type: application/json
 }
 
 ###logout the user
-GET http://localhost:5000/auth/logout
+GET https://atp-24eg112d06.onrender.com/auth/logout
 
 ###read all articles
-GET http://localhost:5000/user-api/articles
+GET https://atp-24eg112d06.onrender.com/user-api/articles
 
 ### ADD comment by user to an article
-PUT http://localhost:5000/user-api/articles
+PUT https://atp-24eg112d06.onrender.com/user-api/articles
 Content-Type: application/json
 
 {
@@ -38,7 +38,7 @@ Content-Type: application/json
 
 
 ###change password
-PUT http://localhost:5000/auth/password
+PUT https://atp-24eg112d06.onrender.com/auth/password
 Content-Type: application/json
 
 {
