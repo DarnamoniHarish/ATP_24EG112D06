@@ -135,3 +135,35 @@ commonApp.get("/check-auth",verifyToken("USER","AUTHOR","ADMIN"),(req,res)=>{
         payload:req.user,
     })
 })
+
+// ─── PUBLIC: Get all active articles (no login needed) ────────────────────
+commonApp.get("/articles", async (req, res, next) => {
+  try {
+    const articles = await ArticleModel.find({ isArticleActive: true })
+      .populate("author", "firstName lastName")
+      .sort({ createdAt: -1 });
+
+    res.status(200).json({ message: "articles", payload: articles });
+  } catch (err) {
+    next(err);
+  }
+});
+
+// ─── PUBLIC: Get single article by ID (no login needed) ───────────────────
+commonApp.get("/articles/:id", async (req, res, next) => {
+  try {
+    const article = await ArticleModel.findOne({
+      _id: req.params.id,
+      isArticleActive: true,
+    })
+      .populate("author", "firstName lastName")
+      .populate("comments.user", "email firstName");
+
+    if (!article)
+      return res.status(404).json({ message: "Article not found" });
+
+    res.status(200).json({ message: "article", payload: article });
+  } catch (err) {
+    next(err);
+  }
+});
