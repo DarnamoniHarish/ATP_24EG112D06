@@ -38,11 +38,9 @@ function WriteArticles() {
       //set loading true
       setLoading(true);
       //make POST req to save new article
-      let res=await axios.post("https://atp-24eg112d06.onrender.com/author-api/article",articleObj,{
-    headers: { Authorization: `Bearer ${currentUser.token}` },
-  },{withCredentials:true})
+      let res=await axios.post("https://atp-24eg112d06.onrender.com/author-api/article",articleObj,{withCredentials:true})
       //navigate to AuthorArticle
-      if(res.status==201){
+      if(res.status==200){
         navigate("../articles");
        //navigate("./author-profile/articles")
       }
