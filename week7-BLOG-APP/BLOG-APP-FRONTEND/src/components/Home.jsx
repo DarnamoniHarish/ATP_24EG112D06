@@ -24,7 +24,10 @@ function Home() {
     const fetchArticles = async () => {
       setLoading(true);
       try {
-        const res = await axios.get("https://atp-24eg112d06.onrender.com/auth/articles");
+        const res = await axios.get(
+  "https://atp-24eg112d06.onrender.com/auth/articles",
+  { withCredentials: true }
+);
         if (res.status === 200) {
           setArticles(res.data.payload);
         }
