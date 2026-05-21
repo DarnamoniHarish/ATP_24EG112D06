@@ -46,7 +46,7 @@ function EditArticle() {
     //make req to edit the article
     let res=await axios.put("https://atp-24eg112d06.onrender.com/author-api/article",modifiedArticle,{withCredentials:true});
     if(res.status==200){
-      navigate(`/article/${article._id}`,{status:res.data.payload});
+      navigate(`/article/${article._id}`,{state:res.data.payload});
     }
 
   };
