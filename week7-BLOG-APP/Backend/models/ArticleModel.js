@@ -34,7 +34,7 @@ const articleSchema=new Schema({
         type:Boolean,
         default:true,
     },
-    comments:[{type:commentSchema,default:[]}],
+    comment:[{type:commentSchema,default:[]}],
 },{
     timestamps:true,
     versionKey:false,
