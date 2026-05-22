@@ -34,7 +34,12 @@ const articleSchema=new Schema({
         type:Boolean,
         default:true,
     },
-    comment:[{type:commentSchema,default:[]}],
+    comments:[
+        {
+            type:commentSchema,
+            default:[]
+        }
+    ],
 },{
     timestamps:true,
     versionKey:false,
