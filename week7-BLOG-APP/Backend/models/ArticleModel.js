@@ -7,7 +7,7 @@ const commentSchema=new Schema({
     ref:"user",
     required:[true,"User ID is required"],
     },
-    comments:{
+    comment:{
         type:String,
         required:[true,"Enter a comment"]
     },
